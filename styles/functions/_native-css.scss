@@ -1,0 +1,10 @@
+// Workaround to print real CSS function and values
+@function css-function($function, $values...) {
+  @return $function + unquote("(") + $values + unquote(")");
+}
+
+// Convert SCSS hsl to CSS supported HSL.
+// Preventing it from converting to other color values
+@function css-hsl($values...) {
+  @return css-function(hsl, $values);
+}

@@ -1,0 +1,13 @@
+$color-key: "default" !default;
+
+@function color($name, $variant: $color-key) {
+  $color: null;
+
+  $color-spectrum: map-get($colors, $name);
+
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+
+  @return $color;
+}

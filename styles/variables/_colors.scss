@@ -1,0 +1,23 @@
+// Private variables
+$colors: (
+  black: (
+    default: css-hsl(0, 0%, 0%),
+  ),
+  orange: (
+    default: css-hsl(19, 100%, 50%),
+  ),
+  white: (
+    default: css-hsl(255, 100%, 100%),
+  ),
+  grey: (
+    70: css-hsl(0, 0%, 70%),
+  ),
+);
+
+/** Public variables, expose them here **/
+:root {
+  --color-base: #{color(white)};
+  --color-primary: #{color(black)};
+  --color-secondary: #{color(orange)};
+  --color-grey: #{color(grey, 70)};
+}
