@@ -1,0 +1,6 @@
+## Project setup
+node_modules
+.env
+
+## Next
+.next

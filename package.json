@@ -1,0 +1,45 @@
+{
+  "name": "modern-playground",
+  "version": "1.0.0",
+  "description": "Modern playground to practice modern web examples",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "husky install",
+    "build": "next build",
+    "dev": "next dev",
+    "format": "prettier --write --loglevel error .",
+    "lint-js": "yarn eslint .",
+    "lint-types": "yarn tsc --noEmit",
+    "lint": "yarn run lint-js && yarn run lint-types",
+    "precommit": "lint-staged",
+    "start": "next start"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": [
+      "eslint --fix --quiet",
+      "prettier --write --loglevel error"
+    ],
+    "*.scss": [
+      "prettier --write --loglevel error"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^12.0.10",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.39",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "8.8.0",
+    "eslint-config-next": "12.0.10",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.3",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.5",
+    "webpack": "^5.68.0"
+  }
+}
