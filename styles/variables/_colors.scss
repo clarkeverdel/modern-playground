@@ -1,7 +1,11 @@
 // Private variables
 $colors: (
-  black: (
-    default: css-hsl(0, 0%, 0%),
+  blue: (
+    default: css-hsl(198, 81%, 8%),
+    hover: css-hsl(198, 81%, 12%),
+    active: css-hsl(198, 81%, 16%),
+    light: css-hsl(210, 7%, 94%),
+    disabled: css-hsl(198, 15%, 60%),
   ),
   orange: (
     default: css-hsl(19, 100%, 50%),
@@ -16,8 +20,15 @@ $colors: (
 
 /** Public variables, expose them here **/
 :root {
-  --color-base: #{color(white)};
-  --color-primary: #{color(black)};
-  --color-secondary: #{color(orange)};
+  --color-white: #{color(white)};
+
+  --color-blue: #{color(blue)};
+  --color-blue-active: #{color(blue, active)};
+  --color-blue-disabled: #{color(blue, disabled)};
+  --color-blue-hover: #{color(blue, hover)};
+
+  --color-light-blue: #{color(blue, light)};
+
+  --color-orange: #{color(orange)};
   --color-grey: #{color(grey, 70)};
 }

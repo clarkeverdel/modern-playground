@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+    url('/static/fonts/WorkSans/Montserrat-Bold.ttf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'WorkSans';
+  src: local('WorkSans Medium'), local('WorkSans-Medium'),
+    url('/static/fonts/WorkSans/WorkSans-Medium.ttf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

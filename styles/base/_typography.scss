@@ -1,3 +1,27 @@
-.subtitle {
-  color: var(--color-secondary);
+@mixin font-stack-base {
+  font-family: 'WorkSans', Arial, sans-serif;
+}
+
+@mixin font-stack-heading {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+html {
+  @include font-stack-base();
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include font-stack-heading();
+  color: var(--color-orange);
+}
+
+hgroup {
+  * + *:last-child {
+    color: var(--color-blue);
+  }
 }

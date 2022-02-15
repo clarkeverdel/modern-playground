@@ -1,0 +1,61 @@
+.navigation {
+  margin: var(--spacing-m) 0;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  color: var(--color-light-blue);
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+
+  a,
+  button {
+    display: flex;
+    flex: 1;
+    color: var(--color-light-blue);
+    align-items: center;
+    padding: var(--spacing-xs) var(--spacing-m);
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-blue-hover);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  svg {
+    display: inline-flex;
+    fill: currentColor;
+    margin: 0 var(--spacing-xs) 0 0;
+  }
+}
+
+.listItemActive {
+  composes: listItem;
+  color: var(--color-light-blue);
+
+  a {
+    background-color: var(--color-blue-active);
+  }
+}
+
+.listItemDisabled {
+  composes: listItem;
+  color: var(--color-blue-disabled);
+
+  a {
+    color: var(--color-blue-disabled);
+  }
+}

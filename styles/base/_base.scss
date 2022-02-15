@@ -1,4 +1,27 @@
 html {
-  background-color: var(--color-white);
+  background-color: var(--color-light-blue);
   color: var(--color-black);
+}
+
+.template-home {
+  #__next {
+    display: grid;
+    grid-template-columns: fit-content(100%) 1fr;
+    grid-template-rows: 1fr min-content;
+    grid-template-areas: 'header main' 'header footer';
+
+    > {
+      header {
+        grid-area: header;
+      }
+
+      section {
+        grid-area: main;
+      }
+
+      footer {
+        grid-area: footer;
+      }
+    }
+  }
 }

@@ -1,8 +1,8 @@
 // Most important to import
-@import "functions/index";
+@import 'functions';
 
 // Could use functions
-@import "variables/colors";
+@import 'variables';
 
 // Base
-@import "base/index";
+@import 'base';

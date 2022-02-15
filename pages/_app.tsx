@@ -1,11 +1,15 @@
 // import App from "next/app";
-import type { AppProps /*, AppContext */ } from "next/app";
+import type { AppProps /*, AppContext */ } from 'next/app'
+import { useEffect } from 'react'
 
 // Styles
-import "../styles/styles.scss";
+import '../styles/styles.scss'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  useEffect(() => {
+    document.body.className = pageProps.templateName || ''
+  })
+  return <Component {...pageProps} />
 }
 
 // Only uncomment this method if you have blocking data requirements for
@@ -20,4 +24,4 @@ function MyApp({ Component, pageProps }: AppProps) {
 //   return { ...appProps }
 // }
 
-export default MyApp;
+export default MyApp
